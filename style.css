@@ -1,3 +1,8 @@
 @media (max-width: 979px){ /* debajo de esa res modifica los sig param*/
 
 }
+.navbar {
+  display: flex;
+  flex-direction: column;
+  
+}
