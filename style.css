@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap);
-@media (max-width: 979px){ /* debajo de esa res modifica los sig param*/}
 
 
 @keyframes rainbow-animation {
@@ -12,6 +11,9 @@
   margin: 0;
   padding: 0;
   font-family: 'Ubuntu Mono';
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   background-color: #aaa;
@@ -27,6 +29,10 @@ header {
   font-size: 23px;
   filter: drop-shadow(0 5px 8px black);
   height: 72px;
+  position: fixed;
+  width: 73%;
+  z-index: 10;
+
 }
 .mda {
   height: 24px;
@@ -48,7 +54,9 @@ header {
     -webkit-text-fill-color: transparent;  
   animation: rainbow-animation 35s linear infinite;
 }
-
+.navbar {
+  position: sticky;
+}
 nav ul {
   display: flex;
   list-style-type: none;
@@ -85,7 +93,7 @@ li a:hover {
   position: relative;
   /* left: -50px; */
   text-align: left;
-  color: #444; 
+  color: #4444447e; 
   height: calc(45vh + 30px); 
   /* padding-top: auto; */
   padding-bottom: auto;
@@ -111,26 +119,9 @@ li a:hover {
   height: 45vh;
   max-height: 400px;
 }
-.eye {
-  position: relative;
-  display: inline-block;
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  background: #fff;
-}
-.eye:after { /*pupil*/
-  position: absolute;
-  bottom: 17px;
-  right: 10px;
-  width: 10px;
-  height: 10px;
-  background: #000;
-  border-radius: 50%;
-  content: " ";
-}
 
-/* WORKSA HOVER COLOR  LOOP */
+
+/* WORKS -- A HOVER COLOR  LOOP */
 .project-title a {
   color: #855d2a;
 }
@@ -155,7 +146,7 @@ li a:hover {
   filter: drop-shadow(5px 5px 5px #000);
   margin: 12px;
 }
-.projects {
+.projects-tile {
   display: flex;
   /* flex-flow: column wrap; */
   flex-wrap: wrap;

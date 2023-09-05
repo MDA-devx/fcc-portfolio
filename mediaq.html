@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+Media Queries Example 1
+Sam Scott, Fall 2014
+-->
+<html>
+<head>
+    <title>MQ Example 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: sans-serif; }
+        h1 { color: red; } 
+        h2 { color:blue; }
+        p { color:green; }
+
+        @media (max-width: 768px) and (min-width: 481px) {
+            h1 { color: green; } 
+            h2 { color:red; }
+            p { color:blue; }
+        }
+
+        @media (max-width:479px), print { 
+            h1,h2,p { color:black; }
+        }
+
+        @media print {
+            body { font-family: serif; }
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>I'm a first level heading</h1>
+    <p>I'm a paragraph.</p>
+    <h2>I'm a second level heading</h2>
+    <p>I'm another paragraph.</p>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./mda.png" type="image/x-icon">
     <link
@@ -11,12 +11,22 @@
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     />
     <title>Damian's Personal Portfolio</title>
+    <style>
+        @media (max-width: 600px) { /* debajo de esa res modifica los sig param*/
+            header { display: block; }
+            #welcome-section { display: block; }
+            .works { margin-top: 24px;}
+            .cursor { font-size: 19px;}
+            .helmet { height: 25vh;}
+        }
+
+    </style>
 </head>
 <body>
     <header>
         <div class="banner text-rainbow">
            <img src="mda.png" alt="eat me!" class="mda">
-           M.D.A. Portfolio
+           <span class="project-title">M.D.A. Portfolio</span>
         </div>
         <nav id="navbar" class="navbar">
             <ul>
@@ -35,7 +45,16 @@
             </div>
             <!--  -->
             <div class="welcome-text">
-                <p>csx.codesmith.com<br>
+                <p>
+                display: flex;<br>
+                justify-content: space-between;<br>
+                align-items: center;<br>
+                padding-left: 15%;<br>
+                padding-right: 15%;<br>
+                background-color: rgb(60, 80, 60);<br>
+                color: aliceblue;<br>
+                font-size: 23px;<br>
+                csx.codesmith.com<br>
                 TheOdinProject.com<br>
                 Paper Rock Scissors JS Game.code<br>
                 Landing Page.code<br>
@@ -49,7 +68,7 @@
 
         </div>
         <div class="works">Some of my works</div>
-        <div id="projects" class="projects">
+        <div id="projects-tile" class="projects-tile">
             <div class="project-title">
                 <a href="">
                     <img class="page_img" src="./img/recipes.png" >
@@ -113,6 +132,5 @@
               </div>
         </div>
     </footer>
-    <style src="./eye.js" async></style>
 </body>
 </html>
